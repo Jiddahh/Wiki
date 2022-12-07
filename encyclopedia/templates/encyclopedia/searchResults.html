@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+{% block title %}
+    Wiki
+{% endblock %}
+
+{% block body %}
+    <p>Word not found, please check your spelling and try again</p>
+    <p>Did you mean:</p>
+
+    <ul>
+        {% for entry in entries %}
+            <li><a href="wiki/{{ entry }}">{{ entry }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
